@@ -9,28 +9,35 @@
 
       <div class="hidden md:block">
         <ul class="flex space-x-8">
-          <li>
-            <a  routerLinkActive="text-main!"  routerLink="/home" class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
+          <li class="my-4">
+            <a routerLinkActive="text-main!" routerLink="/home"
+              class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
           </li>
-          <li>
-            <a  routerLinkActive="text-main!" routerLink="/about" class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
-          </li>
-
-          <li>
-            <a routerLinkActive="text-main!"  routerLink="/projects" class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+          <li class="my-4">
+            <a routerLinkActive="text-main!" routerLink="/about"
+              class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
           </li>
 
-          <li>
-            <a routerLinkActive="text-main!"  routerLink="/contact" class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
+          <li class="my-4">
+            <a routerLinkActive="text-main!" routerLink="/projects"
+              class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+          </li>
+
+          <li class="my-4">
+            <a routerLinkActive="text-main!" routerLink="/contact"
+              class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
           </li>
         </ul>
       </div>
 
-      <div class="hire__me hidden md:block" >
-        <button routerLink="/contact"  class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">Hire Me</button>
+      <div class="hire__me hidden md:block">
+        <button routerLink="/contact"
+          class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">Hire
+          Me <i class="ps-2 pi pi-angle-double-right"></i></button>
       </div>
 
       <div class="icons block md:hidden ">
+        <p-button type="button" (click)="visible2 = true" icon="pi pi-bars" [style]="{ backgroundColor: 'transparent' , border: 'none' , color: 'white', fontSize: '2rem'}" />
 
       </div>
 
@@ -39,3 +46,29 @@
 
   </div>
 </nav>
+
+
+<p-drawer  [style]="{ backgroundColor: '#000000' , border: 'none' }" header="Ahmed Atef" [(visible)]="visible2" position="right">
+
+  <ul>
+    <li class="my-4">
+      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/home"
+        class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
+    </li>
+    <li class="my-4">
+      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/about"
+        class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
+    </li>
+
+    <li class="my-4">
+      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/projects"
+        class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+    </li>
+
+    <li class="my-4">
+      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/contact"
+        class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
+    </li>
+  </ul>
+
+</p-drawer>

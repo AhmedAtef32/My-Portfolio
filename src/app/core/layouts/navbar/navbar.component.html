@@ -31,13 +31,17 @@
       </div>
 
       <div class="hire__me hidden md:block">
-        <button routerLink="/contact"
-          class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">Hire
-          Me <i class="ps-2 pi pi-angle-double-right"></i></button>
+        <a href="Ahmed_Atef_CV.pdf.pdf"
+        target="_blank"
+          download="Ahmed Atef CV"
+          class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">
+          Download My CV <i class="ps-2 pi pi-download"></i></a>
+
       </div>
 
       <div class="icons block md:hidden ">
-        <p-button type="button" (click)="visible2 = true" icon="pi pi-bars" [style]="{ backgroundColor: 'transparent' , border: 'none' , color: 'white', fontSize: '2rem'}" />
+        <p-button type="button" (click)="visible2 = true" icon="pi pi-bars"
+          [style]="{ backgroundColor: 'transparent' , border: 'none' , color: 'white', fontSize: '2rem'}" />
 
       </div>
 
@@ -48,7 +52,8 @@
 </nav>
 
 
-<p-drawer  [style]="{ backgroundColor: '#000000' , border: 'none' }" header="Ahmed Atef" [(visible)]="visible2" position="right">
+<p-drawer [style]="{ backgroundColor: '#000000' , border: 'none' , color: 'white'}" header="Ahmed Atef"
+  [(visible)]="visible2" position="right">
 
   <ul>
     <li class="my-4">
@@ -69,6 +74,15 @@
       <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/contact"
         class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
     </li>
+
+      <li class="my-4">
+        <a href="Ahmed_Atef_CV.pdf.pdf"
+        target="_blank"
+          download="Ahmed Atef CV"
+          class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer block text-center hover:bg-main  transition-all duration-300 ">
+          Download My CV <i class="ps-2 pi pi-download"></i></a>
+
+      </li>
   </ul>
 
 </p-drawer>

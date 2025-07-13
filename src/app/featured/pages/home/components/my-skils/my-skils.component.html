@@ -1,0 +1,15 @@
+<div class="bg-[#121214] px-10 py-6 rounded-3xl">
+  <h3 class="text-[22px] font-medium mb-6 text-white">My Skills</h3>
+
+  <owl-carousel-o [options]="customOptions">
+
+    @for (skil of skils; track $index) {
+    <ng-template carouselSlide >
+      <div class="w-[100px]">
+              <img class="w-full"  [src]="skil.image" [alt]="skil.name" >
+      </div>
+    </ng-template>
+    }
+
+  </owl-carousel-o>
+</div>

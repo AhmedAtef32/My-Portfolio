@@ -1,0 +1,22 @@
+<section class="mt-10 mb-5">
+  <div class="container mx-auto">
+    <div class="bg-[#121214] rounded-3xl p-5 px-10">
+      <h2 class="text-[50px] font-medium text-center py-5">Works & Projects</h2>
+
+      <p class="w-full md:w-[45%] mx-auto text-[#9f9f9f] font-normal text-center text-[22px] pb-7">Explore some of my front-end projects, thoughtfully crafted with passion for clean code, responsive design, and
+        seamless user experiences.
+
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+
+        @for (project of projects; track $index) {
+
+          <app-project-card [project]="project"></app-project-card>
+        }
+
+      </div>
+
+    </div>
+  </div>
+</section>

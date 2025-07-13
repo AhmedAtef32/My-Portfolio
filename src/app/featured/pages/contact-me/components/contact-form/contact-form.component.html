@@ -1,0 +1,38 @@
+<div class="border border-[rgba(255,255,255,0.1)]  p-5 px-10  rounded-xl">
+
+  <div class="form my-5 pb-4">
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+
+      <input type="hidden" name="redirect" value="eaf0101b-9564-4a44-b986-78bbcdd80fa0">
+      <input type="hidden" name="redirect" value="http://localhost:4200/">
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-white">Your Name</label>
+        <input type="text" name="name" id="name" required
+          class="text-black mt-1 block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-white">Your Email</label>
+        <input type="email" name="email" id="email" required
+          class="text-black mt-1 block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-white">Your Message</label>
+        <textarea name="message" id="message" rows="4" required
+          class="mt-1 text-black block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2"></textarea>
+      </div>
+
+      <button type="submit"
+        class=" cursor-pointer px-6 py-2 text-white bg-main hover:bg-[#121214] rounded-2xl transition-colors duration-300 block mx-auto">Send
+        Message</button>
+
+    </form>
+
+
+  </div>
+
+
+</div>

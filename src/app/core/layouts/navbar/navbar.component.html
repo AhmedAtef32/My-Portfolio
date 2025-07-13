@@ -1,0 +1,41 @@
+<nav class="bg-[#000000] py-4 fixed top-0 w-full z-50 shadow-lg">
+  <div class="container mx-auto px-4  ">
+
+    <div class="flex items-center justify-between">
+
+      <div class="text-white text-2xl font-bold">
+        <a routerLink="/home"><span class="text-main font-medium">Ahmed</span> Atef</a>
+      </div>
+
+      <div class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li>
+            <a  routerLinkActive="text-main!"  routerLink="/home" class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
+          </li>
+          <li>
+            <a  routerLinkActive="text-main!" routerLink="/about" class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
+          </li>
+
+          <li>
+            <a routerLinkActive="text-main!"  routerLink="/projects" class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+          </li>
+
+          <li>
+            <a routerLinkActive="text-main!"  routerLink="/contact" class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hire__me hidden md:block" >
+        <button routerLink="/contact"  class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">Hire Me</button>
+      </div>
+
+      <div class="icons block md:hidden ">
+
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>

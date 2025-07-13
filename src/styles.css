@@ -4,6 +4,7 @@
 @theme{
   --color-main: #eb5d3a;
 }
+@import 'animate.css';
 
 body{
   padding-top: 100px;

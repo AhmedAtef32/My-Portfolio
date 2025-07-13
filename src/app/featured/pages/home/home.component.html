@@ -1,27 +1,40 @@
 <section>
   <div class="container mx-auto px-4">
 
-    <div class="flex items-center justify-between flex-wrap py-4">
+    <div class="flex items-center justify-between flex-wrap py-4 overflow-hidden">
 
-      <div class="w-full md:w-4/12 bg-[#121214] p-5 rounded-3xl  ">
+      <div class="w-full md:w-4/12 bg-[#121214] p-5 rounded-3xl  " data-aos="fade-right" data-aos-easing="linear"
+        data-aos-duration="1500">
 
         <app-image-home></app-image-home>
       </div>
 
-      <div class="w-full md:w-8/12 md:px-5 rounded-3xl mt-5 md:mt-0">
+      <div class=" w-full md:w-8/12 md:px-5 rounded-3xl mt-5 md:mt-0  "  data-aos="fade-left" data-aos-easing="linear"
+        data-aos-duration="1500">
 
-       <app-home-info></app-home-info>
+        <app-home-info  data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"></app-home-info>
 
-        <app-my-skils></app-my-skils>
+        <app-my-skils data-aos="fade-up" data-aos-easing="linear"
+        data-aos-duration="2500"></app-my-skils>
       </div>
 
 
     </div>
 
 
-    <app-works-and-projects></app-works-and-projects>
 
-    <app-kick-start></app-kick-start>
 
-  </div>
+    <div data-aos="fade-up">
+
+      <app-works-and-projects ></app-works-and-projects>
+    </div>
+
+
+
+    <div data-aos="fade-up">
+
+      <app-kick-start ></app-kick-start>
+    </div>
+
+    </div>
 </section>

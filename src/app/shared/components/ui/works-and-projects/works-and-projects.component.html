@@ -1,9 +1,12 @@
 <section class="mt-10 mb-5">
   <div class="container mx-auto">
     <div class="bg-[#121214] rounded-3xl p-5 px-10">
-      <h2 class="text-[50px] font-medium text-center py-5">Works & Projects</h2>
+      <h2 class="text-[50px] font-medium text-center py-5 " data-aos="fade-down" data-aos-duration="3000">Works &
+        Projects</h2>
 
-      <p class="w-full md:w-[45%] mx-auto text-[#9f9f9f] font-normal text-center text-[22px] pb-7">Explore some of my front-end projects, thoughtfully crafted with passion for clean code, responsive design, and
+      <p class="w-full md:w-[45%] mx-auto text-[#9f9f9f] font-normal text-center text-[22px] pb-7" data-aos="fade-right"
+        data-aos-offset="300" data-aos-easing="ease-in-sine">Explore some of my front-end projects, thoughtfully crafted
+        with passion for clean code, responsive design, and
         seamless user experiences.
 
       </p>
@@ -12,7 +15,8 @@
 
         @for (project of projects; track $index) {
 
-          <app-project-card [project]="project"></app-project-card>
+        <app-project-card data-aos="flip-left" data-aos-easing="ease-out-cubic" [attr.data-aos-duration]="$index*1000"
+          [project]="project"></app-project-card>
         }
 
       </div>

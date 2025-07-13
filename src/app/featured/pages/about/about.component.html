@@ -1,14 +1,16 @@
 <section>
   <div class="container mx-auto px-4">
 
-    <div class="flex items-center justify-between flex-wrap py-4">
+    <div class="flex items-center justify-between flex-wrap py-4 overflow-hidden">
 
-      <div class="w-full md:w-4/12 bg-[#121214] p-5 rounded-3xl  ">
+      <div class="w-full md:w-4/12 bg-[#121214] p-5 rounded-3xl  " data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
 
         <app-image-home></app-image-home>
       </div>
 
-      <div class="w-full md:w-8/12 md:px-5 rounded-3xl mt-5 md:mt-0">
+      <div class="w-full md:w-8/12 md:px-5 rounded-3xl mt-5 md:mt-0" data-aos="fade-left" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
 
         <app-about-info></app-about-info>
 
@@ -18,15 +20,20 @@
     </div>
 
 
-    <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-5  overflow-hidden">
 
-      <app-experience></app-experience>
+      <app-experience data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"></app-experience>
 
-      <app-education></app-education>
+      <app-education data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"></app-education>
 
     </div>
 
-    <app-my-skils></app-my-skils>
+    <div class="overflow-hidden" data-aos="fade-left" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+
+      <app-my-skils></app-my-skils>
+    </div>
+
 
 
     <app-kick-start></app-kick-start>

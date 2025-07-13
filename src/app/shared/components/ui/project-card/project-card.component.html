@@ -1,12 +1,20 @@
 <div class="project__card relative group bg-[#121214] border border-[rgba(255,255,255,0.1)]  ">
-  <div class="project__image rounded-t-2xl  overflow-hidden">
-    <img class="w-full" [src]="project().image" [alt]="project().name">
+  <div class="project__image rounded-t-2xl  overflow-hidden cursor-pointer">
+    <div>
+      <a target="_blank" [href]="project().link">
 
-    <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)] flex items-center justify-center opacity-0  group-hover:opacity-100 transition-all duration-300">
-      <div class="viewProject">
-        <a class="text-main" target="_blank" [href]="project().link"> <i class="pi pi-eye" style="font-size: 3rem;"></i></a>
-      </div>
+        <img class="w-full" [src]="project().image" [alt]="project().name">
+      </a>
     </div>
+
+
+    <!-- <div
+      class="absolute inset-0 bg-[rgba(0,0,0,0.5)] flex items-center justify-center opacity-0  group-hover:opacity-100 transition-all duration-300">
+      <div class="viewProject">
+        <a class="text-main" target="_blank" [href]="project().link"> <i class="pi pi-eye"
+            style="font-size: 3rem;"></i></a>
+      </div>
+    </div> -->
 
   </div>
 

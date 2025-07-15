@@ -1,0 +1,10 @@
+<div class="service__card  bg-[#121214] border border-[rgba(255,255,255,0.1)] py-10 px-5 rounded-2xl group " data-aos="fade-up" data-aos-duration="2000"  [attr.data-aos-delay]="100* index()">
+  <div class="service__icon text-center">
+    <i [class]="service().icon" class=" text-[50px] text-main    group-hover:scale-110 transition-all duration-300" style="font-size: 32px;"></i>
+  </div>
+  <h3 class="text-[20px] font-medium text-white text-center mt-3"> {{service().title}} </h3>
+
+  <p class="text-[#9f9f9f] text-[20px] font-[500] text-center mt-3">
+    {{service().desc}}
+  </p>
+</div>

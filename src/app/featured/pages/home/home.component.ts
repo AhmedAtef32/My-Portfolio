@@ -6,6 +6,7 @@ import { WorksAndProjectsComponent } from '../../../shared/components/ui/works-a
 import { KickStartComponent } from '../../../shared/components/ui/kick-start/kick-start.component';
 import AOS from 'aos';
 import { isPlatformBrowser } from '@angular/common';
+import { ServicesComponent } from "./components/services/services.component";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { isPlatformBrowser } from '@angular/common';
     HomeInfoComponent,
     WorksAndProjectsComponent,
     KickStartComponent,
-  ],
+    ServicesComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

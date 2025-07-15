@@ -8,10 +8,11 @@ import { EducationComponent } from "./components/education/education.component";
 import { MySkilsComponent } from "../home/components/my-skils/my-skils.component";
 import AOS from 'aos';
 import { isPlatformBrowser } from '@angular/common';
+import { ServicesComponent } from "../home/components/services/services.component";
 
 @Component({
   selector: 'app-about',
-  imports: [KickStartComponent, HomeInfoComponent, ImageHomeComponent, AboutInfoComponent, ExperienceComponent, EducationComponent, MySkilsComponent],
+  imports: [KickStartComponent, HomeInfoComponent, ImageHomeComponent, AboutInfoComponent, ExperienceComponent, EducationComponent, MySkilsComponent, ServicesComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

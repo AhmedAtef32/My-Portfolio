@@ -1,37 +1,102 @@
-<div class="border border-[rgba(255,255,255,0.1)]  md:p-5 px-10  rounded-xl overflow-hidden">
+<div
+  class="rounded-2xl border border-gray-200 bg-white p-6 transition-colors duration-300 dark:border-white/10 dark:bg-[#18181b] md:p-8"
+>
+  <form
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    class="space-y-6"
+  >
+    <input
+      type="hidden"
+      name="access_key"
+      value="eaf0101b-9564-4a44-b986-78bbcdd80fa0"
+    />
 
-  <div class="form my-5 pb-4">
+    <!-- Name -->
+    <div>
+      <label
+        for="name"
+        class="mb-2 block text-sm font-medium text-gray-800 dark:text-white"
+      >
+        Full Name
+      </label>
 
-    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+        placeholder="Enter your full name"
+        class="w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 outline-none transition-all duration-300 placeholder:text-gray-500 hover:border-main focus:border-main dark:border-white/10 dark:bg-[#121214] dark:text-white dark:placeholder:text-gray-500"
+      />
+    </div>
 
-      <input type="hidden" name="access_key" value="eaf0101b-9564-4a44-b986-78bbcdd80fa0">
+    <!-- Email -->
+    <div>
+      <label
+        for="email"
+        class="mb-2 block text-sm font-medium text-gray-800 dark:text-white"
+      >
+        Email Address
+      </label>
 
-      <div>
-        <label for="name" class="block text-sm font-medium text-white">Your Name</label>
-        <input type="text" name="name" id="name" required
-          class="text-black mt-1 block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2">
-      </div>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        placeholder="Enter your email"
+        class="w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 outline-none transition-all duration-300 placeholder:text-gray-500 hover:border-main focus:border-main dark:border-white/10 dark:bg-[#121214] dark:text-white dark:placeholder:text-gray-500"
+      />
+    </div>
 
-      <div>
-        <label for="email" class="block text-sm font-medium text-white">Your Email</label>
-        <input type="email" name="email" id="email" required
-          class="text-black mt-1 block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2">
-      </div>
+    <!-- Subject -->
+    <div>
+      <label
+        for="subject"
+        class="mb-2 block text-sm font-medium text-gray-800 dark:text-white"
+      >
+        Subject
+      </label>
 
-      <div>
-        <label for="message" class="block text-sm font-medium text-white">Your Message</label>
-        <textarea name="message" id="message" rows="4" required
-          class="mt-1 text-black block w-full bg-[rgba(255,255,255,0.8)] rounded-md shadow-sm focus:ring-main focus:border-main p-2"></textarea>
-      </div>
+      <input
+        id="subject"
+        name="subject"
+        type="text"
+        placeholder="Project Discussion"
+        class="w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 outline-none transition-all duration-300 placeholder:text-gray-500 hover:border-main focus:border-main dark:border-white/10 dark:bg-[#121214] dark:text-white dark:placeholder:text-gray-500"
+      />
+    </div>
 
-      <button type="submit"
-        class=" cursor-pointer px-6 py-2 text-white bg-main hover:bg-[#121214] rounded-2xl transition-colors duration-300 block mx-auto">Send
-        Message</button>
+    <!-- Message -->
+    <div>
+      <label
+        for="message"
+        class="mb-2 block text-sm font-medium text-gray-800 dark:text-white"
+      >
+        Message
+      </label>
 
-    </form>
+      <textarea
+        id="message"
+        name="message"
+        rows="6"
+        required
+        placeholder="Tell me about your project..."
+        class="w-full resize-none rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-gray-900 outline-none transition-all duration-300 placeholder:text-gray-500 hover:border-main focus:border-main dark:border-white/10 dark:bg-[#121214] dark:text-white dark:placeholder:text-gray-500"
+      ></textarea>
+    </div>
 
+    <!-- Button -->
+    <button
+      type="submit"
+      class="group flex w-full items-center justify-center gap-3 rounded-2xl bg-main px-8 py-4 font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-main/30 md:w-fit"
+    >
+      <span>Send Message</span>
 
-  </div>
-
-
+      <i
+        class="pi pi-send transition-transform duration-300 group-hover:translate-x-1"
+      ></i>
+    </button>
+  </form>
 </div>

@@ -1,0 +1,57 @@
+/* Dark Mode Support */
+:host {
+  --bg-primary: #18181b;
+  --bg-secondary: #27272a;
+  --text-primary: #ffffff;
+  --text-secondary: #9f9f9f;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --main-color: var(--main-color-primary, #3b82f6);
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :host {
+    --bg-primary: #f4f4f5;
+    --bg-secondary: #ffffff;
+    --text-primary: #18181b;
+    --text-secondary: #6f6f6f;
+    --border-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Dark class for explicit dark mode */
+:host(.dark-mode) {
+  --bg-primary: #18181b;
+  --bg-secondary: #27272a;
+  --text-primary: #ffffff;
+  --text-secondary: #9f9f9f;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light class for explicit light mode */
+:host(.light-mode) {
+  --bg-primary: #f4f4f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #18181b;
+  --text-secondary: #6f6f6f;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Component styling with CSS variables */
+.contact-icon-card {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.contact-icon-card:hover {
+  transform: translateY(-4px);
+}
+
+.contact-icon-label {
+  color: var(--text-primary);
+}
+
+.contact-icon-link {
+  color: var(--text-secondary);
+}

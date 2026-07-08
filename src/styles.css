@@ -1,13 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
-@theme{
+@theme {
   --color-main: #eb5d3a;
 }
 @import 'animate.css';
 
-body{
+:root {
+  color-scheme: dark;
+  --background: #000000;
+  --surface: #121214;
+  --panel: #111827;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.12);
+  --link: #eb5d3a;
+}
+
+body {
   padding-top: 100px;
   font-family: "Roboto", sans-serif;
-  background-color: #000000;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark, body.dark {
+  color-scheme: dark;
+  --background: #000000;
+  --surface: #121214;
+  --panel: #111827;
+  --text: #ffffff;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.12);
+  --link: #eb5d3a;
+}
+
+html.light, body.light {
+  color-scheme: light;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --panel: #e2e8f0;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.12);
+  --link: #eb5d3a;
+}
+
+html.light, body.light {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.text-main {
+  color: var(--link) !important;
+}
+
+.bg-main {
+  background-color: var(--link) !important;
+}
+
+.border-main {
+  border-color: var(--link) !important;
+}
+
+body.light .text-white {
+  color: var(--text) !important;
+}
+
+body.light .bg-\[\#000000\],
+body.light .bg-\[\#121214\],
+body.light .bg-\[\#111827\] {
+  background-color: var(--panel) !important;
+}
+
+/* body.light .border-gray-800,
+body.light .border-\[rgba\(255,255,255,0\.1\)\] {
+  border-color: rgba(15, 23, 42, 0.16) !important;
+} */
+
+body.light .text-\[\#9f9f9f\],
+body.light .text-gray-400 {
+  color: var(--muted) !important;
+}
+
+body.light .hover\:bg-\[\#121214\]:hover {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light .hover\:text-main:hover {
+  color: var(--link) !important;
+}
+
+body.light .bg-\[\#000000\]::before,
+body.light .bg-\[\#121214\]::before {
+  background-color: transparent;
 }

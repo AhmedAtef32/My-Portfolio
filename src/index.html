@@ -22,13 +22,6 @@
               : "light";
           }
           document.documentElement.classList.add(theme);
-          if (document.body) {
-            document.body.classList.add(theme);
-          } else {
-            document.addEventListener("DOMContentLoaded", function () {
-              document.body.classList.add(theme);
-            });
-          }
         } catch (e) {
           console.warn("Theme init failed", e);
         }

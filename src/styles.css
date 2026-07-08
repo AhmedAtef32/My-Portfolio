@@ -22,10 +22,10 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background);
   color: var(--text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
-html.dark, body.dark {
+html.dark {
   color-scheme: dark;
   --background: #000000;
   --surface: #121214;
@@ -36,7 +36,7 @@ html.dark, body.dark {
   --link: #eb5d3a;
 }
 
-html.light, body.light {
+html.light {
   color-scheme: light;
   --background: #f8fafc;
   --surface: #ffffff;
@@ -47,7 +47,12 @@ html.light, body.light {
   --link: #eb5d3a;
 }
 
-html.light, body.light {
+html.dark,
+html.light {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+html.light {
   background-color: var(--background);
   color: var(--text);
 }
@@ -64,13 +69,13 @@ html.light, body.light {
   border-color: var(--link) !important;
 }
 
-body.light .text-white {
+html.light .text-white {
   color: var(--text) !important;
 }
 
-body.light .bg-\[\#000000\],
-body.light .bg-\[\#121214\],
-body.light .bg-\[\#111827\] {
+html.light .bg-\[\#000000\],
+html.light .bg-\[\#121214\],
+html.light .bg-\[\#111827\] {
   background-color: var(--panel) !important;
 }
 
@@ -79,20 +84,20 @@ body.light .border-\[rgba\(255,255,255,0\.1\)\] {
   border-color: rgba(15, 23, 42, 0.16) !important;
 } */
 
-body.light .text-\[\#9f9f9f\],
-body.light .text-gray-400 {
+html.light .text-\[\#9f9f9f\],
+html.light .text-gray-400 {
   color: var(--muted) !important;
 }
 
-body.light .hover\:bg-\[\#121214\]:hover {
+html.light .hover\:bg-\[\#121214\]:hover {
   background-color: rgba(15, 23, 42, 0.08) !important;
 }
 
-body.light .hover\:text-main:hover {
+html.light .hover\:text-main:hover {
   color: var(--link) !important;
 }
 
-body.light .bg-\[\#000000\]::before,
-body.light .bg-\[\#121214\]::before {
+html.light .bg-\[\#000000\]::before,
+html.light .bg-\[\#121214\]::before {
   background-color: transparent;
 }

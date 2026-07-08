@@ -59,20 +59,22 @@
       </div>
 
       <div class="hidden md:flex items-center gap-4">
-        <button
-          type="button"
-          class="theme-toggle-btn text-white border border-gray-800 rounded-full size-4 cursor-pointer hover:bg-main transition-all duration-300"
-          (click)="toggleTheme()"
-          [attr.aria-label]="
-            isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
-          "
-        >
-          <i
-            class="pi"
-            [class.pi-sun]="isDarkMode"
-            [class.pi-moon]="!isDarkMode"
-          ></i>
-        </button>
+        <om-theme-toggle animationStyle="circle" [duration]="900">
+          <button
+            type="button"
+            class="theme-toggle-btn text-white border border-gray-800 rounded-full size-4 cursor-pointer hover:bg-main transition-all duration-300"
+            [attr.aria-label]="
+              isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
+            "
+          >
+            <i
+              class="pi"
+              [class.pi-sun]="isDarkMode"
+              [class.pi-moon]="!isDarkMode"
+            ></i>
+          </button>
+        </om-theme-toggle>
+
         <a
           href="Ahmed Atef CV.pdf"
           target="_blank"
@@ -83,8 +85,8 @@
         ></a>
       </div>
 
-      <div class="icons  flex items-center gap-3 md:hidden">
-        <button
+      <div class="icons flex items-center gap-3 md:hidden">
+        <!-- <button
           type="button"
           class="theme-toggle-btn hidden md:block text-white border border-gray-800 rounded-full size-4 cursor-pointer hover:bg-main transition-all duration-300"
           (click)="toggleTheme()"
@@ -97,7 +99,7 @@
             [class.pi-sun]="isDarkMode"
             [class.pi-moon]="!isDarkMode"
           ></i>
-        </button>
+        </button> -->
         <p-button
           type="button"
           (click)="visible2 = true"

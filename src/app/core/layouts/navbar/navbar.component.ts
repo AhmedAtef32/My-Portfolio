@@ -2,9 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DrawerModule } from 'primeng/drawer';
 import { ButtonModule } from 'primeng/button';
+import {
+  NgxThemeToggleComponent,
+  OmDarkIcon,
+  OmLightIcon,
+  OmLabel,
+} from '@omnedia/ngx-theme-toggle';
+
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, DrawerModule, ButtonModule],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    DrawerModule,
+    ButtonModule,
+    NgxThemeToggleComponent,
+    OmDarkIcon,
+    OmLightIcon,
+    OmLabel,
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -31,21 +47,16 @@ export class NavbarComponent implements OnInit {
   private applyTheme() {
     const root =
       typeof document !== 'undefined' ? document.documentElement : null;
-    const body = typeof document !== 'undefined' ? document.body : null;
-    if (!root || !body) {
+    if (!root) {
       return;
     }
 
     if (this.isDarkMode) {
       root.classList.add('dark');
       root.classList.remove('light');
-      body.classList.add('dark');
-      body.classList.remove('light');
     } else {
       root.classList.add('light');
       root.classList.remove('dark');
-      body.classList.add('light');
-      body.classList.remove('dark');
     }
   }
 }

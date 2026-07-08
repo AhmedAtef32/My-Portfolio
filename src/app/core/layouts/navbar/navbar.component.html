@@ -1,84 +1,146 @@
 <nav class="bg-[#000000] py-4 fixed top-0 w-full z-50 shadow-lg">
-  <div class="container mx-auto px-4  ">
-
+  <div class="container mx-auto px-4">
     <div class="flex items-center justify-between">
-
       <div class="text-white text-2xl font-bold">
-        <a routerLink="/home"><span class="text-main font-medium">Ahmed</span> Atef</a>
+        <a routerLink="/home"
+          ><span class="text-main font-medium">Ahmed</span> Atef</a
+        >
       </div>
 
       <div class="hidden md:block">
         <ul class="flex space-x-8">
           <li class="my-4">
-            <a routerLinkActive="text-main!" routerLink="/home"
-              class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
+            <a
+              data-aos="fade-down"
+              [attr.data-aos-delay]="300"
+              data-aos-duration="700"
+              routerLinkActive="text-main!"
+              routerLink="/home"
+              class="text-white hover:text-main font-medium transition-colors duration-300"
+              >Home</a
+            >
           </li>
           <li class="my-4">
-            <a routerLinkActive="text-main!" routerLink="/about"
-              class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
+            <a
+              data-aos="fade-down"
+              [attr.data-aos-delay]="500"
+              data-aos-duration="700"
+              routerLinkActive="text-main!"
+              routerLink="/about"
+              class="text-white hover:text-main font-medium transition-colors duration-300"
+              >About</a
+            >
           </li>
 
           <li class="my-4">
-            <a routerLinkActive="text-main!" routerLink="/projects"
-              class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+            <a
+              data-aos="fade-down"
+              [attr.data-aos-delay]="700"
+              data-aos-duration="700"
+              routerLinkActive="text-main!"
+              routerLink="/projects"
+              class="text-white hover:text-main font-medium transition-colors duration-300"
+              >Projects</a
+            >
           </li>
 
           <li class="my-4">
-            <a routerLinkActive="text-main!" routerLink="/contact"
-              class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
+            <a
+              data-aos="fade-down"
+              [attr.data-aos-delay]="900"
+              data-aos-duration="700"
+              routerLinkActive="text-main!"
+              routerLink="/contact"
+              class="text-white hover:text-main font-medium transition-colors duration-300"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>
 
       <div class="hire__me hidden md:block">
-        <a href="Ahmed_Atef_CV.pdf (1).pdf" target="_blank" download="Ahmed Atef CV"
-          class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer  hover:bg-main  transition-all duration-300 ">
-          Download My CV <i class="ps-2 pi pi-download"></i></a>
-
+        <a
+          href="Ahmed Atef CV.pdf"
+          target="_blank"
+          download="Ahmed Atef CV"
+          class="text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer hover:bg-main transition-all duration-300"
+        >
+          Download My CV <i class="ps-2 pi pi-download"></i
+        ></a>
       </div>
 
-      <div class="icons block md:hidden ">
-        <p-button type="button" (click)="visible2 = true" icon="pi pi-bars"
-          [style]="{ backgroundColor: 'transparent' , border: 'none' , color: 'white', fontSize: '2rem'}" />
-
+      <div class="icons block md:hidden">
+        <p-button
+          type="button"
+          (click)="visible2 = true"
+          icon="pi pi-bars"
+          [style]="{
+            backgroundColor: 'transparent',
+            border: 'none',
+            color: 'white',
+            fontSize: '2rem',
+          }"
+        />
       </div>
-
     </div>
-
-
   </div>
 </nav>
 
-
-<p-drawer [style]="{ backgroundColor: '#000000' , border: 'none' , color: 'white'}" header="Ahmed Atef"
-  [(visible)]="visible2" position="right">
-
+<p-drawer
+  [style]="{ backgroundColor: '#000000', border: 'none', color: 'white' }"
+  header="Ahmed Atef"
+  [(visible)]="visible2"
+  position="right"
+>
   <ul>
     <li class="my-4">
-      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/home"
-        class="text-white hover:text-main font-medium transition-colors duration-300">Home</a>
+      <a
+        (click)="visible2 = false"
+        routerLinkActive="text-main!"
+        routerLink="/home"
+        class="text-white hover:text-main font-medium transition-colors duration-300"
+        >Home</a
+      >
     </li>
     <li class="my-4">
-      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/about"
-        class="text-white hover:text-main font-medium transition-colors duration-300">About</a>
+      <a
+        (click)="visible2 = false"
+        routerLinkActive="text-main!"
+        routerLink="/about"
+        class="text-white hover:text-main font-medium transition-colors duration-300"
+        >About</a
+      >
     </li>
 
     <li class="my-4">
-      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/projects"
-        class="text-white hover:text-main font-medium transition-colors duration-300">Projects</a>
+      <a
+        (click)="visible2 = false"
+        routerLinkActive="text-main!"
+        routerLink="/projects"
+        class="text-white hover:text-main font-medium transition-colors duration-300"
+        >Projects</a
+      >
     </li>
 
     <li class="my-4">
-      <a (click)="visible2 = false" routerLinkActive="text-main!" routerLink="/contact"
-        class="text-white hover:text-main font-medium transition-colors duration-300">Contact</a>
+      <a
+        (click)="visible2 = false"
+        routerLinkActive="text-main!"
+        routerLink="/contact"
+        class="text-white hover:text-main font-medium transition-colors duration-300"
+        >Contact</a
+      >
     </li>
 
     <li class="my-4">
-      <a href="Ahmed_Atef_CV.pdf (1).pdf" target="_blank" download="Ahmed Atef CV"
-        class=" text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer block text-center hover:bg-main  transition-all duration-300 ">
-        Download My CV <i class="ps-2 pi pi-download"></i></a>
-
+      <a
+        href="Ahmed_Atef_CV.pdf (1).pdf"
+        target="_blank"
+        download="Ahmed Atef CV"
+        class="text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer block text-center hover:bg-main transition-all duration-300"
+      >
+        Download My CV <i class="ps-2 pi pi-download"></i
+      ></a>
     </li>
   </ul>
-
 </p-drawer>

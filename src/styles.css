@@ -5,7 +5,12 @@
   --color-main: #eb5d3a;
 }
 @import 'animate.css';
-
+   ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+      mix-blend-mode: normal;
+    }
+  
 :root {
   color-scheme: dark;
   --background: #000000;
@@ -14,7 +19,7 @@
   --text: #ffffff;
   --muted: #94a3b8;
   --border: rgba(255, 255, 255, 0.12);
-  --link: #eb5d3a;
+  --color-main: #eb5d3a;
 }
 
 body {
@@ -33,7 +38,7 @@ html.dark {
   --text: #ffffff;
   --muted: #94a3b8;
   --border: rgba(255, 255, 255, 0.12);
-  --link: #eb5d3a;
+  --color-main: #eb5d3a;
 }
 
 html.light {
@@ -44,7 +49,7 @@ html.light {
   --text: #0f172a;
   --muted: #475569;
   --border: rgba(15, 23, 42, 0.12);
-  --link: #eb5d3a;
+  --color-main: #eb5d3a;
 }
 
 html.dark,
@@ -57,17 +62,7 @@ html.light {
   color: var(--text);
 }
 
-.text-main {
-  color: var(--link) !important;
-}
 
-.bg-main {
-  background-color: var(--link) !important;
-}
-
-.border-main {
-  border-color: var(--link) !important;
-}
 
 html.light .text-white {
   color: var(--text) !important;
@@ -79,10 +74,6 @@ html.light .bg-\[\#111827\] {
   background-color: var(--panel) !important;
 }
 
-/* body.light .border-gray-800,
-body.light .border-\[rgba\(255,255,255,0\.1\)\] {
-  border-color: rgba(15, 23, 42, 0.16) !important;
-} */
 
 html.light .text-\[\#9f9f9f\],
 html.light .text-gray-400 {
@@ -93,9 +84,7 @@ html.light .hover\:bg-\[\#121214\]:hover {
   background-color: rgba(15, 23, 42, 0.08) !important;
 }
 
-html.light .hover\:text-main:hover {
-  color: var(--link) !important;
-}
+
 
 html.light .bg-\[\#000000\]::before,
 html.light .bg-\[\#121214\]::before {

@@ -86,20 +86,11 @@
       </div>
 
       <div class="icons flex items-center gap-3 md:hidden">
-        <!-- <button
-          type="button"
-          class="theme-toggle-btn hidden md:block text-white border border-gray-800 rounded-full size-4 cursor-pointer hover:bg-main transition-all duration-300"
-          (click)="toggleTheme()"
-          [attr.aria-label]="
-            isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'
-          "
-        >
-          <i
-            class="pi"
-            [class.pi-sun]="isDarkMode"
-            [class.pi-moon]="!isDarkMode"
-          ></i>
-        </button> -->
+        <div class="mt-2">
+          <om-theme-toggle animationStyle="circle" [duration]="900">
+
+        </om-theme-toggle>
+        </div>
         <p-button
           type="button"
           (click)="visible2 = true"
@@ -166,20 +157,6 @@
       >
     </li>
 
-    <li class="my-4">
-      <button
-        type="button"
-        class="w-full text-center text-white py-2 px-6 border border-gray-800 rounded-2xl cursor-pointer hover:bg-main transition-all duration-300"
-        (click)="toggleTheme()"
-      >
-        <i
-          class="pi"
-          [class.pi-sun]="isDarkMode"
-          [class.pi-moon]="!isDarkMode"
-        ></i>
-        <span class="ps-2">{{ isDarkMode ? "Light mode" : "Dark mode" }}</span>
-      </button>
-    </li>
     <li class="my-4">
       <a
         href="Ahmed_Atef_CV.pdf (1).pdf"
